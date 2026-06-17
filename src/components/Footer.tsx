@@ -15,7 +15,7 @@ export default function Footer() {
             <Link href="/excluir-conta" className="hover:text-foreground transition-colors">
               Excluir conta
             </Link>
-            <a href="mailto:luccasfraga@gmail.com" className="hover:text-foreground transition-colors">
+            <a href="mailto:contato@areiaplay.com" className="hover:text-foreground transition-colors">
               Contato
             </a>
           </div>

@@ -15,7 +15,9 @@ export default function Privacidade() {
           <h1 className="text-3xl md:text-4xl font-bold">
             Política de Privacidade
           </h1>
-          <p className="text-muted text-sm">Última atualização: Junho de 2026</p>
+          <p className="text-muted text-sm">
+            Última atualização: Junho de 2026
+          </p>
         </div>
 
         <section className="space-y-4">
@@ -29,18 +31,20 @@ export default function Privacidade() {
               <span className="text-brand mt-1">•</span>Nome completo
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-brand mt-1">•</span>Nome de usuário (username)
+              <span className="text-brand mt-1">•</span>Nome de usuário
+              (username)
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-brand mt-1">•</span>Endereço de e-mail (usado
-              para autenticação)
+              <span className="text-brand mt-1">•</span>Endereço de e-mail
+              (usado para autenticação)
             </li>
             <li className="flex items-start gap-2">
               <span className="text-brand mt-1">•</span>Cidade e localização
               aproximada (para encontrar arenas e jogadores próximos)
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-brand mt-1">•</span>Foto de perfil (opcional)
+              <span className="text-brand mt-1">•</span>Foto de perfil
+              (opcional)
             </li>
             <li className="flex items-start gap-2">
               <span className="text-brand mt-1">•</span>Dados de partidas,
@@ -63,8 +67,8 @@ export default function Privacidade() {
               estatísticas e histórico de partidas
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-brand mt-1">•</span>Mostrar arenas e jogadores
-              próximos a você
+              <span className="text-brand mt-1">•</span>Mostrar arenas e
+              jogadores próximos a você
             </li>
             <li className="flex items-start gap-2">
               <span className="text-brand mt-1">•</span>Calcular rankings e
@@ -81,9 +85,9 @@ export default function Privacidade() {
           <h2 className="text-xl font-semibold">3. Armazenamento</h2>
           <p className="text-muted leading-relaxed">
             Todos os dados são armazenados de forma segura na plataforma
-            Supabase, com criptografia em trânsito (TLS) e controle de acesso por
-            linha (Row-Level Security). Apenas você tem acesso aos seus próprios
-            dados pessoais.
+            Supabase, com criptografia em trânsito (TLS) e controle de acesso
+            por linha (Row-Level Security). Apenas você tem acesso aos seus
+            próprios dados pessoais.
           </p>
         </section>
 
@@ -104,13 +108,14 @@ export default function Privacidade() {
         <section className="space-y-4">
           <h2 className="text-xl font-semibold">5. Contato</h2>
           <p className="text-muted leading-relaxed">
-            Em caso de dúvidas sobre esta política, entre em contato pelo e-mail:
+            Em caso de dúvidas sobre esta política, entre em contato pelo
+            e-mail:
           </p>
           <a
-            href="mailto:luccasfraga@gmail.com"
+            href="mailto:contato@areiaplay.com"
             className="text-brand hover:underline font-medium"
           >
-            luccasfraga@gmail.com
+            contato@areiaplay.com
           </a>
         </section>
       </main>

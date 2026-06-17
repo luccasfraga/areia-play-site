@@ -13,7 +13,9 @@ export default function ExcluirConta() {
       <main className="flex-1 max-w-3xl mx-auto px-6 py-16 md:py-24 space-y-12">
         <div className="space-y-2">
           <h1 className="text-3xl md:text-4xl font-bold">Exclusão de Conta</h1>
-          <p className="text-muted text-sm">Última atualização: Junho de 2026</p>
+          <p className="text-muted text-sm">
+            Última atualização: Junho de 2026
+          </p>
         </div>
 
         <section className="space-y-4">
@@ -83,10 +85,10 @@ export default function ExcluirConta() {
             solicitar a exclusão da conta entrando em contato pelo e-mail:
           </p>
           <a
-            href="mailto:luccasfraga@gmail.com"
+            href="mailto:contato@areiaplay.com"
             className="text-brand hover:underline font-medium"
           >
-            luccasfraga@gmail.com
+            contato@areiaplay.com
           </a>
         </section>
       </main>
