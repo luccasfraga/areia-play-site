@@ -1,26 +1,188 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #FEFDFB;
   --foreground: #171717;
+  --brand: #F57C00;
+  --brand-dark: #E06500;
+  --brand-light: #FFF8F0;
+  --green: #2E7D32;
+  --green-light: #F0FDF4;
+  --sand: #FBF7F0;
+  --muted: #737373;
+  --card: #FFFFFF;
+  --border: #E5E5E5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand: var(--brand);
+  --color-brand-dark: var(--brand-dark);
+  --color-brand-light: var(--brand-light);
+  --color-green: var(--green);
+  --color-green-light: var(--green-light);
+  --color-sand: var(--sand);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-border: var(--border);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-archivo), Arial, Helvetica, sans-serif;
+}
+
+/* ── Hero animations ── */
+
+@keyframes hero-slide-left {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes hero-slide-right {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(0.5deg); }
+  75% { transform: translateY(4px) rotate(-0.5deg); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(16px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 124, 0, 0.3); }
+  50% { box-shadow: 0 0 24px 4px rgba(245, 124, 0, 0.15); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg); }
+  75% { transform: rotate(3deg); }
+}
+
+.animate-hero-left {
+  animation: hero-slide-left 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-hero-right {
+  animation: hero-slide-right 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: float-reverse 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+
+.animate-wiggle:hover {
+  animation: wiggle 0.4s ease-in-out;
+}
+
+/* ── Sport chip hover ── */
+.sport-chip {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.sport-chip:hover {
+  transform: translateY(-4px) scale(1.05);
+  color: var(--foreground);
+}
+.sport-chip:hover .sport-emoji {
+  animation: bounce-subtle 0.6s ease-in-out;
+}
+
+/* ── Feature card tilt ── */
+.feature-card {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+.feature-card:hover .feature-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* ── Step number pulse ── */
+.step-number {
+  transition: all 0.3s ease;
+}
+.step-number:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(245, 124, 0, 0.3);
+}
+
+/* ── CTA background ── */
+.cta-bg {
+  background: linear-gradient(-45deg, #F57C00, #E06500, #2E7D32, #257A2E);
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* ── Audience card ── */
+.audience-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.audience-card:hover {
+  transform: translateX(6px);
+  border-color: #2E7D32;
 }
